@@ -1,0 +1,32 @@
+ <h1 class="registerheader">SIGN IN</h1>
+<div style="background-color: #f8f8f8; padding: 15px;">
+<div class="container">
+    <div class="row">
+        <div class="col-md-push-4 col-md-5" >
+            <form class="form-horizontal" id="login_form" name='myForm' ng-submit="loginSubmit()">
+
+                <div class="form-group">
+                        <label>Your email address</label>
+                        <input class="form-control" type="email" placeholder="Your email address" name='email' ng-model="myemail" required>
+                        <span style="color:red" ng-show="myForm.email.$touched && myForm.email.$error.required">Email is required.</span>
+                    
+                        <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+                        <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+                        </span>
+                </div>
+
+                <div class="form-group">
+                        <label>Password</label>
+                        <input class="form-control" type="password" placeholder="Password" ng-model="password" name='password' required>
+                        <span style="color:red" ng-show="myForm.password.$touched && myForm.password.$error.required">Password is required.</span>
+                </div>
+                
+                <input class="btn btn-primary btn-block" ng-disabled="myForm.$invalid" style="background-color: #9a153a; border-color: #9a153a;"  type="submit" value="Sign in">
+
+            </form>
+            <hr>
+            <h4 style="text-align: center;">Not Registered? <a style="color: #9a153a;" data-ui-sref="root.register">Sign up</a></h4>
+        </div>
+    </div>
+</div>
+</div>

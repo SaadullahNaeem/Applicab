@@ -1,0 +1,55 @@
+<h1 class="registerheader">REGISTRATION</h1>
+<div style="background-color: #f8f8f8; padding: 15px;">
+
+<div class="container">
+<div class="row">
+        <div class="col-md-push-4 col-md-5" >
+
+            <form class="form-horizontal" name='myForm' id="register_form" ng-submit="registerSubmit()" novalidate>
+
+                    <div class="form-group">
+                        <label>Your email address</label>
+                        <input class="form-control" type="email" placeholder="Your email address" name='email' ng-model="email" required>
+                        <span style="color:red" ng-show="myForm.email.$touched && myForm.email.$error.required">Email is required.</span>
+                    
+                        <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+                        <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+                        </span>
+                    </div>
+           
+
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input class="form-control" type="password" placeholder="Password" ng-model="password" name='password' required ng-pattern="/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/">
+                        <span style="color:red" ng-show="myForm.password.$touched && myForm.password.$error.required">Password is required.</span>
+                        <span style="color:red" >
+                            <span ng-show="myForm.password.$error.pattern">Minimum 8 characters, at least one letter, one number and one special character.</span>
+                        </span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Confirm your password</label>
+                        <input class="form-control" type="password" placeholder="Confirm your password" ng-model="cpassword" name="cpassword" required ng-pattern='password' >
+                        <span style="color:red" ng-show="myForm.cpassword.$touched && myForm.cpassword.$error.required">Confirmation of password is required.</span>
+                        <span style="color:red" >
+                          <span ng-show="myForm.cpassword.$error.pattern">Passwords should be identical.</span>
+                        </span>
+                    </div>
+                
+            
+            <div class="row">
+                <div class="checkbox">
+                    <label><input type="checkbox"  name='agreed' ng-model='agreed' required>I accept the <a role='button'> General Terms Of Use.</a></label>
+                </div>
+            </div>
+
+            <div class="row">
+                   <input class="btn btn-primary btn-block" style="background-color: #9a153a; border-color: #9a153a;" type="submit" value="Sign up" ng-disabled="myForm.$invalid">
+            
+            </div>
+            </form>
+            <hr>
+            <h4 style="text-align: center;">Already member? <a style="color: #9a153a;" data-ui-sref="root.login">Log in</a></h4>
+</div>
+</div>
+</div>

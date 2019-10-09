@@ -1,0 +1,29 @@
+{
+  "name": "angular-seed",
+  "description": "A starter project for AngularJS",
+  "version": "0.0.0",
+  "homepage": "https://github.com/angular/angular-seed",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-route": "~1.5.0",
+    "angular-loader": "~1.5.0",
+    "angular-mocks": "~1.5.0",
+    "html5-boilerplate": "^5.3.0",
+    "angular-cookies": "^1.6.4",
+    "angular-ui-router": "0.2.7",
+    "firebase": "^4.1.2",
+    "angular-google-maps": "^2.4.1",
+    "angular-reverse-geocode": "assemany-angular-reverse-geocode#^1.0.1",
+    "bootstrap": "^3.3.7",
+    "angular-resource": "^1.6.4",
+    "angularfire": "^2.3.0",
+    "firebaseui": "^2.2.1",
+    "jquery.countdown": "^2.2.0"
+  },
+  "resolutions": {
+    "firebase": "^4.1.2",
+    "angular": "1.6.4"
+  }
+}

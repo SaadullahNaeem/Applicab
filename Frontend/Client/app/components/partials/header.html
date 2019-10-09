@@ -1,0 +1,54 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">APPLICAB</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+
+      <ul class="nav navbar-nav navbar-right" >
+        <li data-ui-sref-active="active"><a data-ui-sref="root.book"><span class="glyphicon glyphicon-book"></span> Book</a></li>
+        <li id='in' ng-hide="phoneAuth" data-ui-sref-active="active"><a role='button' ng-click="authenticate()"><span class="glyphicon glyphicon-log-in"></span> Signin</a></li>
+
+        <!-- <li ng-hide="login" data-ui-sref-active="active"><a data-ui-sref="root.login"><span class="glyphicon glyphicon-car"></span> Drive</a></li>
+        <li ng-hide="login" data-ui-sref-active="active"><a data-ui-sref="root.register"><span class="glyphicon glyphicon-user"></span> Subscribe</a></li> -->
+        <li id='out' ng-show="phoneAuth"><a role='button' ng-click="disauthenticate()"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+
+        <!-- <li ng-show="login"><a data-ui-sref="root.logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li> -->
+        <!-- <li id='sidemenu'><span style="font-size:30px;cursor:pointer;font-weight: bolder;" onclick="openNav()">&#9776;</span></li>   -->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- <div id="mySidenav" class="sidenav">
+  <span role="button" style="color: white" class="closebtn" onclick="closeNav()">&times;</span>
+  <li data-ui-sref-active="active"><a class='sidenavlink' data-ui-sref="root.dashboard">Home</a></li>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div> -->
+
+
+
+ <!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog" style="overflow: hidden;">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title">Sign in</h2>
+        </div>
+        <div class="modal-body">
+          <div id="firebaseui-auth-container"></div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
